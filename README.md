@@ -1,6 +1,5 @@
 # Description
 
-
 __It is a correct example building arm docker image on x86 machine.__
 
 * `src` is a folder including a simple html page called `index.html`.
