@@ -1,5 +1,6 @@
-# Description
+# Error example to build arm docker image on x86 machine
 
+## Description
 
 __It is an error example when building arm docker image on x86 machine.__
 
@@ -7,7 +8,7 @@ __It is an error example when building arm docker image on x86 machine.__
 * `Dockerfile` is used to build a docker image with python http server to display `index.html`.
 * `build` is an excutable to build the docker image.  
 
-# Build the docker image 
+## Build the docker image 
 
 ```
 ./build
