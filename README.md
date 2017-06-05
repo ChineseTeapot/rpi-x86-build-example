@@ -23,7 +23,6 @@ docker run -d -p 8000:8000 dorrybamboo/rpi-x86-ex
 
 Visit `arm_machine_ip:8000` on the browser with html page displayed.
 
-
 ## Explaination
 
 ### Docker image delivery
