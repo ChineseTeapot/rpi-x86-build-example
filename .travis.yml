@@ -1,7 +1,14 @@
 language: go
+
 sudo: required
+
 dist: trusty
-group: edge
+
+env:
+    - USER=dorrybamboo REPO=rpi-x86-ex
+    - secure: "ppP+Ay+f0NsEUSKxCneLzf2wHDiH8LkrjFo83UvbujIswR3N9GgkMJ5bjj8qHkNQegJWBdPxwV2sD/WkR0bRZFoSj6y3XRpITIVbQUfCHOljl0r/JJJD9UCNXG0A37l+CuEaFPoKFM/t4pkJtqA9frNRzJYDFFXWPxsgAdqUa+Kjz6fOpXA3fKJtKxye+oY72jB9OVv7Pk1mY4hpDJ0VflnbKlxZMxFIUo68scqHzywL4hnzlp2PXUN0UdT/bSwij9gRl+3vvAsvrAlzTwWFwWpFn9SnJyjbIdWNQ9iDlTM3c60IjQyejuPbRiIZ1qfM3qZ+xWIFDEhw2wSOzRaSLdO1hpmoZedWdUg/LQPxBIVxlxNB/qp+vbSPNmhzzcdfx4PrNYJKwNqCtq6RTdTwr4MoDmZc3T9Y54jLkWMbVZc3i/KQ2jqdQFIxtyCJ9j2ICVO+ilt/dDUgtmHh40pJxC+hC8XfkEIRgsg0Ol01BkiHN1cdo8sSAPl1q8zSZKGRdp0EhegIFxD53b9gRNsCdcUNmCStdMnODeT0Hm6plgdR8D8DFXSVSZafkjUsLgYYGI8s+SRrxSKUnZSxgHGvTxDzo33GRVmHloBYblXP/HGa3kmNgfiSXJklSBKwlkuyodkSxEAietFVhbzqygMxTTnraY/iMm0o+5e1/Cp3AOk="
+    - secure: "UwTwmEC0V1U1VoiKK12ibVDxI5vhRzO67m2LJNy1bOfcGqbKT5dW73m5hXAF/xNHfWsDah3xoGinoUwy/XUonWryIc27ZJlcfLsHIQDSgVpH59Ej7SMlmwzbV9ph9/fygiKJAv9g6JFH3eQvKtP0YkM0t08xMoYpN/5h5f/NS/iyrLk6sYAObSaePSKOoLUFB1I/sDuJaGR6GwynbN6s4nrzvsi5lpijKO55QxC9g4CfN+ekW9SPJiGlddrzcixWObepENDcF76PseZvr6rhziqioGRQ3JcoPl6+VUDPUj3V0O/WeZ9lsfzaqIDuMvb9cI9AjjiEKr2eddvvOurNKiTWKVzvGzLfr3B5+mO3LKgcVautHHUL6825qLjaC0riP1svk958kg5ps7+Jd/n2lqXT3DjqnGgPzgypixuqfWbbhmMMqAu/jr/ggzVO5de/pDcSnEjgCndlqu4OUJsD0zdsvj23GjdwTxLbc7jtqNbYA18adQJcS8ng6e43l3tkVIAWFPkoE7GpiO139KQ6N8SENlxEIyzSiJSplQTwLx3N7mIIZ8wNqSpOxADKVLonFuBQtUL1RlV+AjEBJqtetOKxWe6Z8IqrjJqKeL4cchM9OHdr0E6PqYyAEeGmZ8XX66qjWP6HsONGsnsAp5c13X1Zftrs9juM3r02vtA0qqs="
+    - secure: "XWmesTVBuwBaO7TC6JxdfrWTbKYPP/CGbPfW86jpzU1s7ICmwZCG2LxnY5re30PoUH17K93czGtnQNxWnWjd6tYscAlzfR/NIvLk/zp0EHpIDuLZxMRCAG3hjFYP+dQC9vRo9v3pp4J99btKMKXrxz7I0o1SKXjt+ldf6r4G7GA4EGDPIJABsvPDZdelYvGiQEs0BNXzkWYvdySXA49vlqbYqhHEXiX8dnCk9Iq01McZ7zU/U+1mwC2V2rQ4M/ad5rSKy6rqUt9w4XWbV5T2edrJiaX6i+D0UObdOJHBhUDS0BRbnXfF4mZG+jie6XphMLiD9fIIzzjsa3HXH7505Dp+qOQZ0mNakZIt57m8YPI2uI8E5EImYevsT8u7zOZIvhpM6sxyls7qqjeA11RL/y5fDHp3skID8+bWMdZVrLjL7g7Jn2IYwwBuriyQpT1eOUNuLzmIHdtrf1PF90fkjjFVBNGMjb7rY1RjoSOM8NVkqEF4fGQFX3NtX3n8FtcIPO1GJr+lSQ71L/gsSJ8SxtPxpWFURQrSOUMCc6BdpcsgF069sWER4dF7rXS0jvGXy/ME9hkTVO/BLurFA6sZAuDBAtlHhJIN1eh7dI/lGEcWAP/q20Y2CEa0os4BWvPeTp/bbvjS2jqEf0a0669DBZRDAB4ZAeFOWmOxXD4PoNs="
 
 services:
     - docker
@@ -17,4 +24,10 @@ install: true
 
 script:
     - ./build
+
+after_success:
+    - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login -u="$DOCKER_HUB_USER" -p="$DOCKER_HUB_PASS";
+      docker push USER/REPO;
+      fi
 

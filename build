@@ -1,1 +1,1 @@
-docker build -t rpi-x86-ex .
+docker build -t dorrybamboo/rpi-x86-ex .
