@@ -7,7 +7,7 @@ services:
     - docker
  
 before_script:
-    - sudo pt-get update && apt-get install -y --no-install-recommends qemu-user-static binfmt-support
+    - sudo apt-get update && apt-get install -y --no-install-recommends qemu-user-static binfmt-support
     - sudo update-binfmts --enable qemu-arm
     - sudo update-binfmts --display qemu-arm
     - sudo mount binfmt_misc -t binfmt_misc /proc/sys/fs/binfmt_misc  
