@@ -6,6 +6,7 @@ __It is a correct example building arm docker image on x86 machine.__
 * `Dockerfile` is used to build a docker image with python http server to display `index.html`.
 * `build` is an excutable to build the docker image.  
 * `start` is an excutable to start a container of docker image.
+* `.travis.yml` is a travis configuration file
 
 # Build the docker image 
 
