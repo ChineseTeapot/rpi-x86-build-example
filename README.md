@@ -1,7 +1,7 @@
 # Description
 
 
-*It is an error example when building arm docker image on x86 machine.*
+__It is an error example when building arm docker image on x86 machine.__
 
 * `src` is a folder including a simple html page called `index.html`.
 * `Dockerfile` is used to build a docker image with python http server to display `index.html`.
@@ -13,4 +13,4 @@
 ./build
 ```
 
-*If you run `./build` on x86, the image cannot be built with error log.*
+__If you run `./build` on x86, the image cannot be built with error log.__
