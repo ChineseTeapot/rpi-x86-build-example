@@ -1,36 +1,24 @@
 language: go
-
 sudo: required
-
 dist: trusty
-
 env:
-    global:
-        - secure: "ppP+Ay+f0NsEUSKxCneLzf2wHDiH8LkrjFo83UvbujIswR3N9GgkMJ5bjj8qHkNQegJWBdPxwV2sD/WkR0bRZFoSj6y3XRpITIVbQUfCHOljl0r/JJJD9UCNXG0A37l+CuEaFPoKFM/t4pkJtqA9frNRzJYDFFXWPxsgAdqUa+Kjz6fOpXA3fKJtKxye+oY72jB9OVv7Pk1mY4hpDJ0VflnbKlxZMxFIUo68scqHzywL4hnzlp2PXUN0UdT/bSwij9gRl+3vvAsvrAlzTwWFwWpFn9SnJyjbIdWNQ9iDlTM3c60IjQyejuPbRiIZ1qfM3qZ+xWIFDEhw2wSOzRaSLdO1hpmoZedWdUg/LQPxBIVxlxNB/qp+vbSPNmhzzcdfx4PrNYJKwNqCtq6RTdTwr4MoDmZc3T9Y54jLkWMbVZc3i/KQ2jqdQFIxtyCJ9j2ICVO+ilt/dDUgtmHh40pJxC+hC8XfkEIRgsg0Ol01BkiHN1cdo8sSAPl1q8zSZKGRdp0EhegIFxD53b9gRNsCdcUNmCStdMnODeT0Hm6plgdR8D8DFXSVSZafkjUsLgYYGI8s+SRrxSKUnZSxgHGvTxDzo33GRVmHloBYblXP/HGa3kmNgfiSXJklSBKwlkuyodkSxEAietFVhbzqygMxTTnraY/iMm0o+5e1/Cp3AOk="
-        - secure: "UwTwmEC0V1U1VoiKK12ibVDxI5vhRzO67m2LJNy1bOfcGqbKT5dW73m5hXAF/xNHfWsDah3xoGinoUwy/XUonWryIc27ZJlcfLsHIQDSgVpH59Ej7SMlmwzbV9ph9/fygiKJAv9g6JFH3eQvKtP0YkM0t08xMoYpN/5h5f/NS/iyrLk6sYAObSaePSKOoLUFB1I/sDuJaGR6GwynbN6s4nrzvsi5lpijKO55QxC9g4CfN+ekW9SPJiGlddrzcixWObepENDcF76PseZvr6rhziqioGRQ3JcoPl6+VUDPUj3V0O/WeZ9lsfzaqIDuMvb9cI9AjjiEKr2eddvvOurNKiTWKVzvGzLfr3B5+mO3LKgcVautHHUL6825qLjaC0riP1svk958kg5ps7+Jd/n2lqXT3DjqnGgPzgypixuqfWbbhmMMqAu/jr/ggzVO5de/pDcSnEjgCndlqu4OUJsD0zdsvj23GjdwTxLbc7jtqNbYA18adQJcS8ng6e43l3tkVIAWFPkoE7GpiO139KQ6N8SENlxEIyzSiJSplQTwLx3N7mIIZ8wNqSpOxADKVLonFuBQtUL1RlV+AjEBJqtetOKxWe6Z8IqrjJqKeL4cchM9OHdr0E6PqYyAEeGmZ8XX66qjWP6HsONGsnsAp5c13X1Zftrs9juM3r02vtA0qqs="
-        - secure: "XWmesTVBuwBaO7TC6JxdfrWTbKYPP/CGbPfW86jpzU1s7ICmwZCG2LxnY5re30PoUH17K93czGtnQNxWnWjd6tYscAlzfR/NIvLk/zp0EHpIDuLZxMRCAG3hjFYP+dQC9vRo9v3pp4J99btKMKXrxz7I0o1SKXjt+ldf6r4G7GA4EGDPIJABsvPDZdelYvGiQEs0BNXzkWYvdySXA49vlqbYqhHEXiX8dnCk9Iq01McZ7zU/U+1mwC2V2rQ4M/ad5rSKy6rqUt9w4XWbV5T2edrJiaX6i+D0UObdOJHBhUDS0BRbnXfF4mZG+jie6XphMLiD9fIIzzjsa3HXH7505Dp+qOQZ0mNakZIt57m8YPI2uI8E5EImYevsT8u7zOZIvhpM6sxyls7qqjeA11RL/y5fDHp3skID8+bWMdZVrLjL7g7Jn2IYwwBuriyQpT1eOUNuLzmIHdtrf1PF90fkjjFVBNGMjb7rY1RjoSOM8NVkqEF4fGQFX3NtX3n8FtcIPO1GJr+lSQ71L/gsSJ8SxtPxpWFURQrSOUMCc6BdpcsgF069sWER4dF7rXS0jvGXy/ME9hkTVO/BLurFA6sZAuDBAtlHhJIN1eh7dI/lGEcWAP/q20Y2CEa0os4BWvPeTp/bbvjS2jqEf0a0669DBZRDAB4ZAeFOWmOxXD4PoNs="
-        - USER=dorrybamboo REPO=rpi-x86-ex
+  global:
+  - USER=dorrybamboo REPO=rpi-x86-ex
+  - secure: QopRfo6yQ4cLmK121tod/gl+tufn5VUG5SDncaO6kG5q7bD60JxfyBmkFyd49L4H/bf8kLWEV/XG4coiX7OdNWEAmVnwfIJUtNewkYOvXIvEa3mvMeVnYqzbR4cJ9dh5u0eLGDmZYr5+mYm1hn63sWMCzsZGxoCEW60Wch7HINlOLGo2hvTMnfPXD96puWtdxuT/uvTw0abzsaND0iFvJuyuq5jISB0+Ul/o8mgNous18ASM9A6Ob2FHRDbAUdSvXGWmOCbYDZPZLqfkoS2lCmypfEboWBqYNKfpG/DVl0SGu6eZkll1MaCUFqenTp9OW2Ca/twQhDTPQ7qpfAft+i+Uncn9QLoaHPxnLBpbvCW3MeVSxlUWHHG5MXty5yw5/oFgHWqPbE08J3Zt4IK90Afz6/OPbnt2IXnVzC90kt0sr/2s8EumKPIJmWR8hN/nBYfJ5I5OMoA65dYESY+b1gKPNMPbHIE9AV8Ytm7cgNdeYI/UJD7yD5B9cuIxYEDkI2MCVleE2gMKQIKAVnQqGDIL/Cl9Kb+KTdHhlZ6jV9IG0QMUZ6ecYS05pxlYwuJ3mT+8Caq6ba2x2hEypdrVA52uc4/nIu4QpAd7HK3zzjyaB2BJQ05GhHP6lEQbITHSbPR+F6Oq+BJ2GW93qmzdOffsiLcjtv5qJG88nHVg/bA=
+  - secure: bjwv0kgjL69KjV5FrFWsGnoc4PYiZhY1TBKToIFiW5KCD+h4SjgEOrKcywhLKvKU0l5F2hsG8k5ovS5TADFFhHPv1lu15Djlp4rV6rrOvdA1krtZRZRfxdiJ3WIDEASlgQl4aY8reA2voQHQYOFykQOa28fVg+OKadKK6PU5QUInWzXUJCVgi/x6svdQXzwMU1QYME7rRRxXcnaUOeiglmHmCyb06OIOIEIefpYE8vDe/ej2vJQEQQvl+nxcNtkuw5VAiSdc/fyB/f3kbPXEex7+YOcQ/dqqU1cCOMe5HEKjfXbGtEHctq0QItRTN+YOFzkZEOt0oGAZ1DvYpRRFg2OGt6w5u99jE9JSH+dKjVKKi+PvLjlvpAyoWLDmz3PjOF33/pjPw9nrV5fRMw7IurqisYLI/AhO+7/IorBg2f4H8vXU7w86JjllhWUT1oidLhJrh8ze2wcjZi3kD9h6G6Uvy57aaPQbAA1xAn9V8OW5BkCrD69lHlHxvZInvLw6RaXEDgu2olktQ4BEdBRB4G68DJMKirUMlv2xOPXCfYveUPCftmt0IcO8/YrTSB+NkuHzSgJ7Z8+Ow6/Qamaetakfw4/FT9qv8tzwla0Q3OZ94m13ttPh2K94FxIzQq6JNh0bfQxiz+18zfN36+F7kHGe0GngMsU5/cSZ9oB00fM=
 services:
-    - docker
- 
+- docker
 before_script:
-    - sudo apt-get update
-    - sudo apt-get install -y --no-install-recommends qemu-user-static binfmt-support
-    - sudo update-binfmts --enable qemu-arm
-    - sudo update-binfmts --display qemu-arm
-    - sudo sh -c "echo ':arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm-static:' > /proc/sys/fs/binfmt_misc/register"
-
+- sudo apt-get update
+- sudo apt-get install -y --no-install-recommends qemu-user-static binfmt-support
+- sudo update-binfmts --enable qemu-arm
+- sudo update-binfmts --display qemu-arm
+- sudo sh -c "echo ':arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm-static:'
+  > /proc/sys/fs/binfmt_misc/register"
 install: true
-
 script:
-    - ./build
-
+- "./build"
 after_success:
-    - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      echo "$DOCKER_HUB_USER";
-      echo "$DOCKER_HUB_PASS";
-      echo "$USER/$REPO";
-      docker login -u "$DOCKER_HUB_USER" -p "$DOCKER_HUB_PASS";
-      docker push $USER/$REPO;
-      fi
-
+- if [ "$TRAVIS_BRANCH" == "master" ]; then echo "$DOCKER_USER"; echo "$DOCKER_PASS";
+  echo "$USER/$REPO"; docker login -u "$DOCKER_USER" -p "$DOCKER_PASS"; docker push
+  $USER/$REPO; fi
