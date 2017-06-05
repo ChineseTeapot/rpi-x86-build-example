@@ -1,5 +1,7 @@
-# Description
 
+# Build arm docker image on x86 locally
+
+## Description
 
 __It is a correct example building arm docker image on x86 machine.__
 
@@ -8,7 +10,7 @@ __It is a correct example building arm docker image on x86 machine.__
 * `build` is an excutable to build the docker image.  
 * `start` is an excutable to start a container of docker image.
 
-# Build the docker image 
+## Build the docker image on x86 machine
 
 ```
 ./build
@@ -16,11 +18,11 @@ __It is a correct example building arm docker image on x86 machine.__
 
 __If you run `./build` on x86, the image CAN be built successfully.__
 
-# Start a container
+## Start a container on arm machine
 
 ```
 ./start
 ```
 
-Visit `localhost:8000` on the browser with html page displayed.
+Visit `arm_machine_ip:8000` on the browser with html page displayed.
 
