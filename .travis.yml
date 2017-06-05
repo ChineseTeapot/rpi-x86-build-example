@@ -1,6 +1,9 @@
 language: go
 sudo: required
 dist: trusty
+branches:
+    only:
+        - master
 env:
   global:
   - USER=dorryjuice REPO=rpi-x86-ex
